@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURTESA GAMER - Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100vh;
+            animation: fadeIn 2s;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+            animation: slideDown 2s ease;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #a3b7d9;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            animation: fadeInSection 2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulseBackground 8s infinite;
+            z-index: 1;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00c6ff;
+            z-index: 2;
+            position: relative;
+        }
+
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin: 0 auto;
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .highlight {
+            color: #00c6ff;
+            font-weight: bold;
+        }
+
+        /* Smooth Section Reveal */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInSection {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes pulseBackground {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        /* Moving Shadow Effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 10%, transparent 70%);
+            transform: scale(0.5);
+            animation: moveShadow 10s infinite;
+            z-index: -1;
+        }
+
+        @keyframes moveShadow {
+            0%, 100% { transform: translate(0, 0) scale(0.5); }
+            50% { transform: translate(-200px, -100px) scale(0.7); }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000428;
+            color: #a3b7d9;
+        }
+
+        footer a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="murtesa-avatar.png" alt="Murtesa Avatar">
+        <h1>MURTESA GAMER</h1>
+        <p>💻 Web Dev | He/Him<br>
+        ⚙️ Node.js • C++ • Python • HTML<br>
+        🤖 Bot Builder: Discord & Telegram<br>
+        📚 Leveling Up: Mastering Java 🚀<br>
+        💡 Turning ideas into solutions.</p>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm <span class="highlight">Murtesa</span>, a passionate web developer and bot builder with a knack for transforming ideas into reality. My journey began with an eagerness to create and innovate. With expertise in <span class="highlight">Node.js</span>, <span class="highlight">C++</span>, <span class="highlight">Python</span>, and <span class="highlight">HTML</span>, I strive to push boundaries and deliver excellence. I aspire to become a <span class="highlight">full-stack developer</span> and love experimenting with technology to make a meaningful impact. Let’s connect and build something amazing together!
+        </p>
+    </section>
+
+    <footer>
+        <p>my discord account: <a href="https://discord.com/users/murtesa_gamer">MURTESA</a></p>
+    </footer>
+</body>
+</html>
